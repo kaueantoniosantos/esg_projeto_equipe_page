@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-container": "#10805e",
+                        "surface-tint": "#006c4e",
+                        "outline": "#6e7a73",
+                        "on-surface-variant": "#3e4943",
+                        "primary-fixed": "#95f5cc",
+                        "secondary-fixed": "#ffe16e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#221b00",
+                        "surface-container-highest": "#e5e2dc",
+                        "secondary": "#705d00",
+                        "surface": "#fcf9f3",
+                        "secondary-fixed-dim": "#e4c542",
+                        "secondary-container": "#ffde59",
+                        "primary-fixed-dim": "#79d9b1",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#79d9b1",
+                        "surface-bright": "#fcf9f3",
+                        "tertiary-fixed-dim": "#79d9b1",
+                        "primary": "#006549",
+                        "on-tertiary-container": "#d8ffea",
+                        "on-surface": "#1c1c18",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#10805e",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dcdad4",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1c1c18",
+                        "inverse-on-surface": "#f3f0eb",
+                        "surface-variant": "#e5e2dc",
+                        "on-primary-fixed": "#002115",
+                        "inverse-surface": "#31312d",
+                        "surface-container-high": "#ebe8e2",
+                        "tertiary": "#006549",
+                        "on-primary-fixed-variant": "#00513a",
+                        "on-tertiary-fixed": "#002115",
+                        "on-secondary-fixed-variant": "#544600",
+                        "surface-container-low": "#f6f3ed",
+                        "surface-container": "#f0eee8",
+                        "outline-variant": "#bdc9c1",
+                        "on-tertiary-fixed-variant": "#00513a",
+                        "tertiary-fixed": "#95f5cc",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#756100",
+                        "background": "#fcf9f3",
+                        "on-primary-container": "#d8ffea"
+                    },
+                    fontFamily: {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .editorial-shadow {
+            box-shadow: 0 32px 64px -12px rgba(28, 28, 24, 0.04);
+        }
+
+        .signature-gradient {
+            background: linear-gradient(135deg, #006549 0%, #10805e 100%);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#fcf9f3]/80 dark:bg-[#1c1c18]/80 backdrop-blur-xl">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-xl font-bold text-[#006549] dark:text-[#95f5cc] font-['Epilogue'] tracking-tight">
+                EcoModa Solidária
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-['Epilogue'] tracking-tight font-bold">
+                <a class="text-[#1c1c18]/70 dark:text-[#fcf9f3]/70 hover:text-[#006549] dark:hover:text-[#95f5cc] transition-colors duration-300"
+                    href="#">Missão</a>
+                <!-- <a class="text-[#006549] dark:text-[#95f5cc] border-b-2 border-[#006549] pb-1" href="#">Equipe</a> -->
+                <!-- <a class="text-[#1c1c18]/70 dark:text-[#fcf9f3]/70 hover:text-[#006549] dark:hover:text-[#95f5cc] transition-colors duration-300"
+                    href="#">Impacto</a> -->
+                <!-- <a class="text-[#1c1c18]/70 dark:text-[#fcf9f3]/70 hover:text-[#006549] dark:hover:text-[#95f5cc] transition-colors duration-300"
+                    href="#">Coleções</a> -->
+            </div>
+            <button
+                class="signature-gradient text-on-primary px-6 py-2 rounded-xl font-bold scale-95 active:scale-90 transition-transform">
+                Contribuir
+            </button>
+        </div>
+    </nav>
+    <main class="pt-24">
+        <!-- Hero Section: Editorial Asymmetry -->
+        <section class="relative px-8 py-20 max-w-7xl mx-auto overflow-hidden">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 z-10">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-bold text-xs tracking-widest uppercase mb-6">Conheça
+                        os Visionários</span>
+                    <h1
+                        class="font-headline text-6xl md:text-8xl font-extrabold text-primary leading-tight -ml-1 tracking-tighter mb-8">
+                        Nossa Equipe
+                    </h1>
+                    <p class="font-body text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl">
+                        Mentes criativas e corações resilientes unidos por um único propósito: transformar o consumo em
+                        um ato de regeneração social e ambiental.
+                    </p>
+                </div>
+                <div class="md:col-span-5 relative">
+                    <div class="aspect-[4/5] rounded-[2rem] overflow-hidden editorial-shadow bg-surface-container-low">
+                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                            data-alt="Group of diverse creative professionals collaborating in a bright sunlit modern studio with recycled textile samples and sketches"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW0SI-6CJkrwzLPmgdpVxY08L5i8R1MqxtcKbEDqW-zo4DSqJLaEzAsUMuIJtqvZDoH56Dgr1NWD5XqmNw0Sn_LXKG_FCydkKAkblcuQrWn6Vh0EhHm7T9LEZCM1oLH3YNlqhXNNSE2Re_8CIjWM-ZdNnMQWHO98_fJbR_0afYN2KFVyneljbqrA1cmBmDk49Bv5awQIKi67u1mLoDUVwyk8vPVm08SrkOeZb74k3retLWPzPw_jtTk2nPmppM1F0xzl6kh4Z8ohGC" />
+                    </div>
+                    <!-- Decorative element -->
+                    <div
+                        class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary-container rounded-full mix-blend-multiply opacity-70">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team Grid: Bento-style Cards -->
+        <section class="bg-surface-container-low py-24 px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div>
+                        <h2 class="font-headline text-4xl font-bold text-primary mb-4">Aqueles Que Fazem a Mudança</h2>
+                        <div class="h-1.5 w-24 signature-gradient rounded-full"></div>
+                    </div>
+                    <p class="max-w-md text-on-surface-variant font-medium">
+                        Especialistas em design regenerativo, economia circular e impacto social trabalhando para
+                        redefinir a moda.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Team Member 1 -->
+                    <div
+                        class="group bg-surface-container-lowest p-6 rounded-[2rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-surface-variant">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Professional portrait of a woman with a warm smile, wearing sustainable linen clothing, in a bright minimal studio"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIzglK43XAqmab8zpLNMuY1LSK10CajfqV4gXO_ww__aa8A8wntLq4_Lq8wWNlb_SFsW3drwCtD4scoYJRkeG0DrdMUAqPGsZuQEZ1foeETBnSuJEv43dAcBR9W4iYyqjo0aJ7g-ivRvchL-vzPMc1SzBzfhqgzCcLMfJ1cPwU7Yo3MD7_lfLcS7z6rERBrhlYiKrGqqx-JK0AQetEng072C32sqqZWXZPcqDP6-lYvkFskBdhnG9Eoyv1u9v4Gw1nPYz3UHGyyIp-" />
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Diego Ferreira</h3>
+                        <p class="text-primary font-bold text-sm uppercase tracking-wider mb-4">Diretora Criativa</p>
+                        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Pioneira em upcycling e design
+                            de baixo impacto há mais de 10 anos.</p>
+                        <a class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container hover:scale-110 transition-transform"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">link</span>
+                        </a>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div
+                        class="group bg-surface-container-lowest p-6 rounded-[2rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-surface-variant">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Man in his 30s with glasses and professional attire, focused expression, standing in a workspace with plants"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCai5uFNrak3Pvwt4WeJvcRU0kORC-A_8djAckwSPb7pZC69R4qAkE7mXenKeFsCV624cgNRxTt4SKV90T-iYguysJF75QhFnZLVb-goroqD9q1nq_X-Ypt9X0_rVS-8WiP9lMHjmNrydDWqQl7vm0mcxGWAvqY4rPNMrgHSgHK4bA4xyHFyPYMO6iXGgB6UvETKQL1Ceu1nKilGOMlHkElAP_KdmR6ch22B257j0cOZt8byTsGquaHF78waN1ao8vh8FVUXsXo-ke0" />
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Gabriela Nascimentos</h3>
+                        <p class="text-primary font-bold text-sm uppercase tracking-wider mb-4">Gestor de Impacto</p>
+                        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Especialista em métricas ESG e
+                            desenvolvimento de comunidades locais.</p>
+                        <a class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container hover:scale-110 transition-transform"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">link</span>
+                        </a>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div
+                        class="group bg-surface-container-lowest p-6 rounded-[2rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-surface-variant">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Smiling woman with curly hair, wearing artisanal jewelry, natural outdoor lighting with soft green background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTCR-9gcRh6eJDpQA84DzEa-0qcPMvrnuZ_G8rdMao2kP8dqH0a3n5Qo7upRTMmiriGqnM5t7ugzXmHCxHF4EmAyJWJUN1KdLJdnwA2Cc4SuG-8jiVA5hVKEQg5yn1sINgaHX69BOMONKUn_ginDuKKYSHD7JXuyAS14oltnjWocm1sgXafQRwsI7Vc_DAoy557mv4XvtlMVhfuSBS-zyEFG_o1TH3SNSp70q9DsjgFG_lETf4YwS56k8-3qZLypWtkiK9LMd-JKOQ" />
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Antonio Santos</h3>
+                        <p class="text-primary font-bold text-sm uppercase tracking-wider mb-4">Líder de Oficinas</p>
+                        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Mestra artesã dedicada à
+                            capacitação técnica de mulheres em situação de risco.</p>
+                        <a class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container hover:scale-110 transition-transform"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">link</span>
+                        </a>
+                    </div>
+                    <!-- Team Member 4 -->
+                    <div
+                        class="group bg-surface-container-lowest p-6 rounded-[2rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-surface-variant">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Young professional man in a beige cotton shirt, looking confident, soft morning light hitting from the side"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKDMnUf_sMwfz5b_0zZceTf8hFsdXbKGQ-6orwgCK41saOWEOdCu99UwJTtpFY8btjvWKaGHF5SpvGgmyfUR_JpFzhzhaG11jK0kDXVYyIkWRwwz-OlJvAzUwg6CqbGU_BpZmpnn_7LUzalceEkXZ_AE9poxcfK6REtjsMz_aJ_9Wx-jL8dWJxDTsY-NhUizGsriia7-M5o6JnfsWkXWcpr78XlBGSTiXl3ag_JF9AOytZXzE__yTyL5AA00L_gejWInP_gsXelTsS" />
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Helena Feliciano</h3>
+                        <p class="text-primary font-bold text-sm uppercase tracking-wider mb-4">Cadeia de Suprimentos
+                        </p>
+                        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Responsável por rastrear e
+                            garantir a ética de todos os nossos fornecedores.</p>
+                        <a class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container hover:scale-110 transition-transform"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">link</span>
+                        </a>
+                    </div>
+                    <!-- Team Member 5 -->
+                    <div
+                        class="group bg-surface-container-lowest p-6 rounded-[2rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-surface-variant">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Young woman with a creative style, glasses, looking thoughtfully at the camera, art studio background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZL83FWSKWetLXHdX-cjb9ahcSITm-DGjY6RP_9t28p1umcuZMr0xVacjZV4ymCfB6hvVWoCCo3wjJDkv7mp5niwDW9D8hq-bhwgtaLYQ5A37i3B2rodoeGcdl1Tz2NpP2sDrlN4BNGLAcCx_4q2gD5Ioi-Br44AoQAq96zqSUHvY4ry4A403UHL2kOka8N7ZlbdDr-xLG9d5xmb_Heskq8-I1U4-Si7BCXlkKkowvEqEouVfws_zEZ4eDpU5Sw2-Q2EcaZWmMep_O" />
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Mariana Negreiros</h3>
+                        <p class="text-primary font-bold text-sm uppercase tracking-wider mb-4">Comunicação Visual</p>
+                        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Transforma os valores da marca
+                            em histórias visuais autênticas e empáticas.</p>
+                        <a class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container hover:scale-110 transition-transform"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">link</span>
+                        </a>
+                    </div>
+                    <!-- Team Member 6 -->
+                    <div
+                        class="group bg-surface-container-lowest p-6 rounded-[2rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-surface-variant">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Mature man with beard, wearing an apron over a shirt, surrounded by textile rolls and tools"
+                                src="https://img.freepik.com/fotos-premium/mulher-profissional-realizada-em-ia-generativa-de-escritorio_896194-2958.jpg" />
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Mariana São Bernardo</h3>
+                        <p class="text-primary font-bold text-sm uppercase tracking-wider mb-4">Curador Têxtil</p>
+                        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Expert em fibras naturais e
+                            processos de tingimento orgânico sustentável.</p>
+                        <a class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container hover:scale-110 transition-transform"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">link</span>
+                        </a>
+                    </div>
+                    <!-- Team Member 7 -->
+                    <div
+                        class="group bg-surface-container-lowest p-6 rounded-[2rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-surface-variant">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Elegant woman in a white sustainable dress, holding a tablet, bright airy office space with plants"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLCWjjRktew958eISP55dUZYZUAu5aZ21Qnbk3LzfFfLOuzU0dzdYFKwaVuk3FW3-m7yMmcQYORuIGYGItiFF46PIaXD1aYd3p3TxCP2MebS_VAr-gZEEQbJi3t5AmXFT4PoskMNiXwaE2mKgDuSSbRQNVnDcguUuEEXabtqxzmMMAyH02sLzCCBhe9MiqIsocW4rkUR5lmJm1t-QtbtsCu8DSXGHf6L9X42bgoR2oXuNN3utf2Gr5l-ULnZcBlLYcFcFCaqkldHl0" />
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Sofia Willeman</h3>
+                        <p class="text-primary font-bold text-sm uppercase tracking-wider mb-4">Parcerias Estratégicas
+                        </p>
+                        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Conecta nossa missão a marcas
+                            globais que desejam mudar o mundo.</p>
+                        <a class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container hover:scale-110 transition-transform"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">link</span>
+                        </a>
+                    </div>
+                    <!-- Team Member 8 -->
+                    <div
+                        class="group bg-surface-container-lowest p-6 rounded-[2rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                        <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-surface-variant">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Man with a friendly face, casual clothing, sitting in a park-like setting with soft focus background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpzUTC_PWh41TbTiZ588H4BfCvwMexJCO_Hj5hYBu2lVN_TjIxqdaZebAgPDjV7rx5ttfozKUbz7a-4GjzEzrUQlht-2pwCSUVWsTMbY3cyRcmtDnDGIlPcYPHtCPiS1pTtXmvUE1hjA1vYfJE4gml9LdkmIZUubGh0qgFnyZUKT5tJx8yldJuaXZYHQXdns6bkNDU6ju4VJti8Gq7VANEx8H2H3Gu6wzz2S8Kdss9pPwVY5xzEySUvCj4MMc5M1kEeVEkvZ-dB3tk" />
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Sanches Moreira</h3>
+                        <p class="text-primary font-bold text-sm uppercase tracking-wider mb-4">Logística Circular</p>
+                        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Otimiza nossa malha de entrega e
+                            coleta para resíduos zero.</p>
+                        <a class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container hover:scale-110 transition-transform"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">link</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to Action: Layered Depth -->
+        <!-- <section class="py-24 px-8 max-w-5xl mx-auto text-center">
+            <div class="bg-primary-container p-12 md:p-20 rounded-[3rem] relative overflow-hidden editorial-shadow">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-[#10805e] rounded-full blur-3xl opacity-50 -mr-32 -mt-32">
+                </div>
+                <div class="relative z-10">
+                    <h2
+                        class="font-headline text-4xl md:text-5xl font-extrabold text-on-primary-container mb-6 leading-tight">
+                        Quer fazer parte deste movimento?</h2>
+                    <p class="text-on-primary-container opacity-90 text-lg mb-10 max-w-xl mx-auto">Estamos sempre em
+                        busca de talentos que compartilham nossa visão de um futuro mais justo e sustentável.</p>
+                    <button
+                        class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform active:scale-95">
+                        Ver Vagas Abertas
+                    </button>
+                </div>
+            </div>
+        </section> -->
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#f6f3ed] dark:bg-emerald-950 w-full border-t-0 rounded-none">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-8 py-12 space-y-6 md:space-y-0 max-w-7xl mx-auto">
+            <div class="text-lg font-bold text-[#006549] dark:text-[#95f5cc] font-['Epilogue']">EcoModa Solidária</div>
+            <div class="flex space-x-8 text-sm tracking-wide font-['Manrope']">
+                <a class="text-[#1c1c18]/60 dark:text-[#fcf9f3]/60 hover:text-[#10805e] dark:hover:text-[#95f5cc] transition-colors"
+                    href="#">Instagram</a>
+                <!-- <a class="text-[#1c1c18]/60 dark:text-[#fcf9f3]/60 hover:text-[#10805e] dark:hover:text-[#95f5cc] transition-colors"
+                    href="#">LinkedIn</a> -->
+                <!-- <a class="text-[#1c1c18]/60 dark:text-[#fcf9f3]/60 hover:text-[#10805e] dark:hover:text-[#95f5cc] transition-colors"
+                    href="#">Contato</a> -->
+                <a class="text-[#1c1c18]/60 dark:text-[#fcf9f3]/60 hover:text-[#10805e] dark:hover:text-[#95f5cc] transition-colors"
+                    href="#">Privacidade</a>
+            </div>
+            <div class="text-[#1c1c18]/60 dark:text-[#fcf9f3]/60 text-xs font-['Manrope']">
+                © 2024 EcoModa Solidária. Tecendo sustentabilidade e empatia.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
